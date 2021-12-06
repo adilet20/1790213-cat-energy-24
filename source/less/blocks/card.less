@@ -6,6 +6,22 @@
   margin: 0;
   padding-top: 13px;
   padding-bottom: 19px;
+
+  @media (min-width: @tablet) {
+    padding: 27px 38px;
+    border: 1px solid @special_grey;
+    box-sizing: border-box;
+  }
+
+  @media (min-width: @desktop) {
+    min-height: 72px;
+    grid-template-columns: 325px 326px 245px;
+    gap: 0;
+    border: none;
+    border-bottom: 1px solid @special_grey-5;
+    padding: 0;
+    align-items: center;
+  }
 }
 
 .card__title {
@@ -14,12 +30,27 @@
   line-height: 16px;
   text-transform: uppercase;
   margin: 0;
+
+  @media (min-width: @tablet) {
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
 
 .card__text {
   display: flex;
   justify-content: space-between;
   margin: 0;
+
+  @media (min-width: @tablet) {
+    font-size: 16px;
+    line-height: 16px;
+  }
+
+  @media (min-width: @desktop) {
+    display: grid;
+    grid-template-columns: 244px 82px;
+  }
 }
 
 .card__text-name {
@@ -34,4 +65,14 @@
   font-size: 14px;
   line-height: 14px;
   margin: 0;
+}
+
+.card__button {
+  width: 100%;
+
+  @media (min-width: @desktop) {
+    width: 248px;
+    height: 40px;
+    box-sizing: border-box;
+  }
 }
