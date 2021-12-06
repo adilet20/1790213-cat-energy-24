@@ -1,17 +1,46 @@
-
 .page-header {
-  width: 320px;
-  min-height: 65px;
+  width: 100%;
   box-sizing: border-box;
-  margin: 0;
+  min-height: 65px;
+  margin: 0 auto;
   outline: 2px solid @status_error;
   outline-offset: -2px;
+
+  @media (min-width: @tablet) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 54px;
+    padding: @tablet-padding;
+    padding-top: 24px;
+  }
+
+  @media (min-width: @desktop) {
+    width: @desktop-content;
+    padding: 0;
+    min-height: 56px;
+    padding-top: 53px;
+    z-index: 5;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.page-header__toggle {
+  @media (min-width: @tablet) {
+    display: none;
+  }
 }
 
 .page-header__row-wrapper {
   display: flex;
   justify-content: space-between;
   padding: 10px 20px 17px 20px;
+
+  @media (min-width: @tablet) {
+    display: block;
+    padding: 0;
+  }
 }
 
 .page-header__logo {
